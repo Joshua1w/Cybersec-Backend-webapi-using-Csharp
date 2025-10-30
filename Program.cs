@@ -23,7 +23,6 @@ if (!string.IsNullOrEmpty(emailPassword))
 }
 
 // Load JWT secret from environment variable if available
-var jwtSecret = Environment.GetEnvironmentVariable("JWT_SECRET_KEY");
 if (!string.IsNullOrEmpty(jwtSecret))
 {
     builder.Configuration["JwtSettings:SecretKey"] = jwtSecret;
